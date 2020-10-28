@@ -16,7 +16,7 @@ const  Navbar = ({props}) => {
   return (
     <div>
       <Toolbar className={classes.toolbar}>
-        <SportsSoccerIcon/>
+        <SportsSoccerIcon style={{ color: 'grey' }}/>
         <Typography
           component="h2"
           variant="h5"

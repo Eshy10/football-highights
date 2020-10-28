@@ -6,6 +6,9 @@ const useStyles = makeStyles((theme) => ({
     },
     toolbarTitle: {
       flex: 1,
+      background: '-webkit-linear-gradient(#007eff, hsla(180,52%,52%,1))',
+      WebkitTextFillColor: 'transparent',
+      WebkitBackgroundClip: 'text',
     },
     toolbarSecondary: {
       justifyContent: 'space-between',
@@ -14,6 +17,10 @@ const useStyles = makeStyles((theme) => ({
     toolbarLink: {
       padding: theme.spacing(1),
       flexShrink: 0,
+      background: '-webkit-linear-gradient(#c3c6d2, hsl(177deg 39% 17%))',
+      WebkitTextFillColor: 'transparent',
+      WebkitBackgroundClip: 'text',
+      cursor: 'pointer'
     },
     search: {
         position: 'relative',

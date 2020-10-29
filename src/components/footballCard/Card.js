@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
@@ -11,6 +12,7 @@ const FootballCard = ({props, imageUrl, name, date}) => {
     const formatDate = datetime => new Date(datetime).toDateString();
     const classes = useStyles(props)
     return (
+        <Link to={`footballHiglight/${name}`}>
         <Card className={classes.root}>
         <CardActionArea>
             <CardMedia
@@ -30,6 +32,7 @@ const FootballCard = ({props, imageUrl, name, date}) => {
         <CardActions>
       </CardActions>
       </Card>
+      </Link>
     )
 }
 

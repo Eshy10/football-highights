@@ -12,6 +12,12 @@ const useStyles = makeStyles((theme) => ({
     WebkitTextFillColor: 'transparent',
     WebkitBackgroundClip: 'text',
     },
+    circular: {
+        display: 'flex',
+        '& > * + *': {
+          marginLeft: theme.spacing(2),
+        },
+      },
 
   }));
 

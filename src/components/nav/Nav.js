@@ -10,7 +10,7 @@ import SportsSoccerIcon from '@material-ui/icons/SportsSoccer';
 import useStyles from './Nav.styles';
 
 
-const  Navbar = ({props}) => {
+const  Navbar = ({props, handleChange}) => {
   const classes = useStyles(props);
 
   return (
@@ -41,6 +41,7 @@ const  Navbar = ({props}) => {
             input: classes.inputInput,
           }}
           inputProps={{ 'aria-label': 'search' }}
+          onChange={handleChange}
         />
       </div>
       </Toolbar>

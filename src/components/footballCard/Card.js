@@ -7,8 +7,8 @@ import Typography from '@material-ui/core/Typography';
 import CardActions from '@material-ui/core/CardActions';
 import {useStyles} from './Card.styles';
 
-const FootballCard = ({props, imageUrl, name}) => {
-
+const FootballCard = ({props, imageUrl, name, date}) => {
+    const formatDate = datetime => new Date(datetime).toDateString();
     const classes = useStyles(props)
     return (
         <Card className={classes.root}>
@@ -22,6 +22,9 @@ const FootballCard = ({props, imageUrl, name}) => {
             <Typography  style={{ color: 'grey', fontWeight: 'bold' }} gutterBottom variant="caption" component="p">
                {name} 
             </Typography>
+            <Typography  style={{ color: 'grey', fontWeight: 'bold' }} gutterBottom variant="caption" component="p">
+            {formatDate(date)} 
+         </Typography>
           </CardContent>
         </CardActionArea>
         <CardActions>

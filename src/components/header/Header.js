@@ -9,7 +9,7 @@ import Champoinship from '../../asset/champ.jpg';
 
 const CarouselHeader = () => {
     return (
-        <div class="carousel-wrapper">
+        <div className="carousel-wrapper">
             <Carousel infiniteLoop useKeyboardArrows autoPlay showThumbs={false} showStatus={false}>
                 <div>
                     <img alt = 'shop-model' src= {Premier}/>

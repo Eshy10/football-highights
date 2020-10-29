@@ -19,7 +19,7 @@ const FootballCard = ({props, imageUrl, name}) => {
           />
 
           <CardContent>
-            <Typography  style={{ color: 'grey', fontWeight: 'bold' }} gutterBottom variant="p" component="p">
+            <Typography  style={{ color: 'grey', fontWeight: 'bold' }} gutterBottom variant="caption" component="p">
                {name} 
             </Typography>
           </CardContent>

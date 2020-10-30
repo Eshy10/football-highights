@@ -19,17 +19,28 @@ const HomePage = () => {
   }, [dispatch]);
 
   let filteredHighlights = [];
+  let categories = [];
+  const FootballCategories = ['Premier League', 'Serie A', 'Bundesliga', 'Ligue 1', 'La Liga', 'Championship']
+  let newCategory = []
   if (!allFootballHighlight) {
     return null;
   }
 
-  console.log(allFootballHighlight)
+//   console.log(allFootballHighlight)
   filteredHighlights = allFootballHighlight.filter(data => data.title.toLowerCase()
     .includes(filterFootballHighlights.toLowerCase()));
 
+    categories = allFootballHighlight.filter(data => data.title.toLowerCase()).map(highlighthighlight => highlighthighlight.competition.name.split(" ").slice(1).join(" "))
+    categories = categories.filter((x, i, a) => a.indexOf(x) === i)
+    categories.forEach(element => {
+if (FootballCategories.includes(element)) newCategory.push(element) 
+    });
+    console.log(categories)
+    console.log(newCategory)
+
   return (
     <div>
-      <Navbar handleChange={e => dispatch(filterFootballHighlight(e.target.value))} />
+      <Navbar category= {newCategory} handleChange={e => dispatch(filterFootballHighlight(e.target.value))} />
       <CarouselHeader/>
       <FootballCardList data={filteredHighlights} />
     </div>

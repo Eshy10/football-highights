@@ -10,7 +10,7 @@ import SportsSoccerIcon from '@material-ui/icons/SportsSoccer';
 import useStyles from './Nav.styles';
 
 
-const  Navbar = ({props, handleChange}) => {
+const  Navbar = ({props, handleChange, category}) => {
   const classes = useStyles(props);
 
   return (
@@ -46,54 +46,17 @@ const  Navbar = ({props, handleChange}) => {
       </div>
       </Toolbar>
       <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
-          <Link
-            color="inherit"
-            noWrap
-            variant="body2"
-            className={classes.toolbarLink}
-          >
-           Premier League
-          </Link>
-          <Link
+      {category ? category.map((section, index) => (
+        <Link
           color="inherit"
           noWrap
+          key = {index}
           variant="body2"
           className={classes.toolbarLink}
         >
-         Serie A
+          {section}
         </Link>
-        <Link
-        color="inherit"
-        noWrap
-        variant="body2"
-        className={classes.toolbarLink}
-      >
-       BundesLiga
-      </Link>
-      <Link
-      color="inherit"
-      noWrap
-      variant="body2"
-      className={classes.toolbarLink}
-    >
-     La Liga
-    </Link>
-    <Link
-    color="inherit"
-    noWrap
-    variant="body2"
-    className={classes.toolbarLink}
-  >
-  Ligue 1
-  </Link>
-  <Link
-  color="inherit"
-  noWrap
-  variant="body2"
-  className={classes.toolbarLink}
->
- Championships
-</Link>
+      )) : ''} 
       </Toolbar>
     </div>
   );

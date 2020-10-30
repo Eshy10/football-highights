@@ -32,6 +32,7 @@ const VideoHighlight = ({props}) => {
        <div className={classes.root}>
        <h1 className={classes.title}>{highlight.competition.name.split(" ").slice(1).join(" ")}</h1>
         <ReactMarkdown allowDangerousHtml='true' source={highlight.videos ? highlight.videos[0].embed : ''} />
+        <p className={classes.title}>{highlight.title}</p>
               </div>
           ))
       }

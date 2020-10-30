@@ -5,6 +5,7 @@ import Homepage from './containers/Homepage';
 import VideoHighlight from './components/footballHighlights/Highlights';
 import './App.css';
 import FootballPage from './components/footballPage/FootballPage';
+import LeagueVideo from './components/league/League';
 
 function App() {
   return (
@@ -25,6 +26,11 @@ function App() {
   path="/footballPage/:footballPageName"
   exact
   component={FootballPage}
+/>
+<Route
+path="/footballPage/footballHiglight/:footballHiglightName"
+exact
+component={LeagueVideo}
 />
     </Switch>
     </div>

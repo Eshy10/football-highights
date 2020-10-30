@@ -6,7 +6,7 @@ const FootballApi = (() => {
     const getAllFootball = () => async dispatch => {
 
       try {
-        const data = await axios.get('https://www.scorebat.com/video-api/v1/');
+        const data = await axios.get('https://cors-anywhere.herokuapp.com/https://www.scorebat.com/video-api/v1/');
         
         dispatch(reducerAction.getFootballHighlights(data.data));
       } catch (error) {

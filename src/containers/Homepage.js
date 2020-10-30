@@ -35,8 +35,6 @@ const HomePage = () => {
     categories.forEach(element => {
 if (FootballCategories.includes(element)) newCategory.push(element) 
     });
-    console.log(categories)
-    console.log(newCategory)
 
   return (
     <div>

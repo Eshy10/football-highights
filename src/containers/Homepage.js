@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Navbar from '../components/nav/Nav';
 import CarouselHeader from '../components/header/Header';
 import FootballCardList from '../components/footballList/CardList'
-import FootballHighlights from '../api/football';
+import FootballHighlights from '../api/Football';
 import { filterFootballHighlight } from '../redux/actions/index'
 
 const HomePage = () => {

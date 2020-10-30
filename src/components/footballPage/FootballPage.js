@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Container from '@material-ui/core/Container';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
-import FootballHighlights from '../../api/football';
+import FootballHighlights from '../../api/Football';
 import FootballCardList from '../../components/footballList/CardList';
 
 const FootballPage = () => {

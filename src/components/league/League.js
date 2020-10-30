@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from "react-markdown";
 import useStyles from './League.styles';
-import FootballHighlights from '../../api/football';
+import FootballHighlights from '../../api/Football';
 
 
 const LeagueVideo = ({props}) => {

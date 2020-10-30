@@ -4,6 +4,7 @@ import Container from '@material-ui/core/Container';
 import Homepage from './containers/Homepage';
 import VideoHighlight from './components/footballHighlights/Highlights';
 import './App.css';
+import FootballPage from './components/footballPage/FootballPage';
 
 function App() {
   return (
@@ -20,6 +21,11 @@ function App() {
     exact
     component={VideoHighlight}
   />
+  <Route
+  path="/footballPage/:footballPageName"
+  exact
+  component={FootballPage}
+/>
     </Switch>
     </div>
     </Router>

@@ -26,6 +26,9 @@ const VideoHighlight = ({props}) => {
   
     return (
       <div>
+      <Link to='/'>
+      <p style={{color: '#2CAAD9'}}>⇦ Back Home</p>
+      </Link>
       {
           allFootballHighlight.filter(video => video.title === footballHiglightName)
           .map(highlight => (

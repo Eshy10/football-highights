@@ -22,10 +22,10 @@ const FootballPage = () => {
     if (!allFootballHighlight) {
       return null;
     }
-    console.log(allFootballHighlight)
+
     let sport = []
     sport.push(allFootballHighlight.filter(football => football.competition.name.split(" ").slice(1).join(" ") === footballPageName))
-    console.log(sport)
+
     return (
         <div>
         <Container>

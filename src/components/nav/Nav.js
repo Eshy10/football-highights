@@ -64,8 +64,14 @@ const  Navbar = ({props, handleChange, category}) => {
 }
 
 Navbar.propTypes = {
-  sections: PropTypes.array,
-  title: PropTypes.string,
+  category: PropTypes.array,
+  handleChange: PropTypes.func.isRequired,
+  props: PropTypes.func,
 };
+
+Navbar.defaultProps = {
+  props: () => {},
+};
+
 
 export default Navbar;

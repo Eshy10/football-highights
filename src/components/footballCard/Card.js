@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
@@ -35,5 +36,17 @@ const FootballCard = ({props, imageUrl, name, date}) => {
       </Link>
     )
 }
+
+FootballCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  props: PropTypes.func,
+};
+
+FootballCard.defaultProps = {
+  props: () => {},
+};
+
 
 export default FootballCard;

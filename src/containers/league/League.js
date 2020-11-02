@@ -4,6 +4,7 @@ import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from "react-markdown";
 import useStyles from './League.styles';
 import FootballHighlights from '../../api/Football';
+import Spinner from '../../asset/spinner.gif'
 
 
 const LeagueVideo = ({props}) => {
@@ -34,7 +35,7 @@ const LeagueVideo = ({props}) => {
           .map(highlight => (
        <div className={classes.root}>
        <h1 className={classes.title}>{highlight.competition.name.split(" ").slice(1).join(" ")}</h1>
-        <ReactMarkdown allowDangerousHtml='true' source={highlight.videos ? highlight.videos[0].embed : ''} />
+        <ReactMarkdown allowDangerousHtml='true' source={highlight.videos ? highlight.videos[0].embed : <img src={Spinner} alt='spinner'/>} />
         <p className={classes.title}>{highlight.title}</p>
               </div>
           ))

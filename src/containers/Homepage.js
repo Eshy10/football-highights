@@ -26,12 +26,11 @@ const HomePage = () => {
     return null;
   }
 
-//   console.log(allFootballHighlight)
   filteredHighlights = allFootballHighlight.filter(data => data.title.toLowerCase()
     .includes(filterFootballHighlights.toLowerCase()));
 
     categories = allFootballHighlight.filter(data => data.title.toLowerCase()).map(highlighthighlight => highlighthighlight.competition.name.split(" ").slice(1).join(" "))
-    categories = categories.filter((x, i, a) => a.indexOf(x) === i)
+    categories = categories.filter((category, index, arr) => arr.indexOf(category) === index)
     categories.forEach(element => {
 if (FootballCategories.includes(element)) newCategory.push(element) 
     });

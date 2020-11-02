@@ -2,10 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Container from '@material-ui/core/Container';
 import Homepage from './containers/Homepage';
-import VideoHighlight from './components/footballHighlights/Highlights';
+import VideoHighlight from './containers/footballHighlights/Highlights';
 import './App.css';
-import FootballPage from './components/footballPage/FootballPage';
-import LeagueVideo from './components/league/League';
+import FootballPage from './containers/footballPage/FootballPage';
+import LeagueVideo from './containers/league/League';
 
 function App() {
   return (

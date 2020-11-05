@@ -76,8 +76,6 @@ npm start
 - React Redux
 - Redux Thunk
 - prop-types
-- Eslint
-- Stylelint
 - NPM
 - Github
 - Heroku

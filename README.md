@@ -11,7 +11,7 @@
     <p align="center"> <img src="./src/asset/soccer.jpg" alt="React-logo" width="200" height="200"> </p>
   </a>
   <h2 align="center">Football Video Highlights</h2>
-  <h3 align="center"> Built with React Hooks, Redux and Data was fetched from Public API. </h3>
+  <h3 align="center"> Built with React Hooks, Redux and Data was fetched from free video Football API. </h3>
 
   <p align="center">
     <a href="https://github.com/Eshy10/football-highights/issues">Report Bug</a>
